@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Андрей Муштавинский](https://up.htmlacademy.ru/htmlcss/27/user/1245817).
-* Наставник: `Неизвестно`.
+* Наставник: [Иван Жарков] (https://htmlacademy.ru/profile/stalyer).
 
 ---
 
