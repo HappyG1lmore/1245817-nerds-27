@@ -8,21 +8,17 @@
 <body>
 <header>
   <nav>
-    <ul>
-      <li>
-        <a href="index.html">
-          <img src="Logo" Alt="Логотип компании" width="160px" height="65px">
-        </a>
-      </li>
-    </ul>
+    <a href="index.html">
+      <img src="Logo" alt="Логотип" width="160" height="65">
+    </a>
     <ul>
       <li><a href="#">Студия </a></li>
-      <li><a href="#">Клиенты </a> </li>
-      <li><a>Магазин </a></li>
-      <li><a href="#">Контакты </a> </li>
+      <li><a href="#">Клиенты </a></li>
+      <li><a href="catalog.html">Магазин</a></li>
+      <li><a href="#">Контакты </a></li>
     </ul>
     <ul>
-      <button type="button">Корзина</button>
+      <li><a href="#" class="cart">Корзина</a></li>
     </ul>
   </nav>
 </header>
@@ -30,45 +26,87 @@
 <main>
   <h1 class="page-title">Магазин готовых шаблонов</h1>
   <section class="filters">
+    <h2>Фильтры</h2>
+    <!-- Попытался тут добавить разметку сортировки. Не знаю как сделать кнопки правильно, думаю отдельным списком -->
+    <div class="Sort">
+      <span class="Sort-title">Сортировать:</span>
+      <ul>
+        <li>по цене</li>
+        <li>по типу</li>
+        <li>по названию</li>
+      </ul>
+      <ul>
+        <li><button type="button"></button></li>
+        <li><button type="button"></button></li>
+      </ul>
+    </div>
+    <div class="Cost">
+      <span class="Sort-title">Стоимость:</span>
     <!-- Здесь будет форма -->
+    </div>
+    <div class="Grid">
+      <span class="Sort-title">Сетка:</span>
+      <!-- Здесь будет форма -->
+    </div>
+    <div class="Features">
+      <span class="Sort-title">Особенности:</span>
+      <!-- Здесь будет форма -->
+    </div>
+    <!-- Снова пока поместил в дивы эти формы, но судя по всему в список нужно т.к. они рядом и подобные? -->
   </section>
   <section class="catalog">
     <ul>
       <li>
         <!-- В размере картинок не уверен на 100%, после 3 лекции поправить! -->
-        <a href="#">
-          <img src="img1" width="360" height="617" alt="Sedona - информационный сайт для туристов">
-        </a>
+        <img src="img1" width="360" height="617" alt="Sedona - информационный сайт для туристов">
+        <div class="catalog-item-Info">
+          <h3> <a href="#">Sedona </a></h3>
+          <p>Информационный сайт для туристов</p>
+          <span class="price-button"> 9900 Руб. </span>
+        </div>
       </li>
       <li>
-      <a href="#">
-          <img src="img2" width="360" height="617" alt="Pink APP- Продуктовый лендинг приложения для iOS и Android">
-        </a>
+        <img src="img2" width="360" height="617" alt="Pink APP- Продуктовый лендинг приложения для iOS и Android">
       </li>
       <li>
-        <a href="#">
-          <img src="img3" width="360" height="617" alt="Barbershop- Сайт салона красоты.Для мужчин, да.">
-        </a>
+        <img src="img3" width="360" height="617" alt="Barbershop- Сайт салона красоты. Для мужчин, да.">
       </li>
       <li>
-        <a href="#">
-          <img src="img4" width="360" height="617" alt="Mishka- Интернет-магазин вязаных игрушек">
-        </a>
+        <img src="img4" width="360" height="617" alt="Mishka- Интернет-магазин вязаных игрушек">
       </li>
       <li>
-        <a href="#">
-          <img src="img5" width="360" height="617" alt="A plus- Лендинг курсов повышения квалификации">
-        </a>
+         <img src="img5" width="360" height="617" alt="A plus- Лендинг курсов повышения квалификации">
       </li>
       <li>
-        <a href="#">
-          <img src="img6" width="360" height="617" alt="Кваст- Промо-сайт производителя крафтового кваса">
-        </a>
+         <img src="img6" width="360" height="617" alt="Кваст- Промо-сайт производителя крафтового кваса">
       </li>
     </ul>
+    <!-- Я не понял как работают кнопки. Делаю ссылками, но вообще не уверен т.к. мы же по клику не переходим на другую страницу. Альтернатива как я понимаю - баттон -->
+    <ul>
+      <li><a>1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">Следующая</a></li>
+    </ul>
+      </section>
+      <!-- Карту пока вставляю в виде картинки т.к. понятия не имею как сделать подругому. ПОтом заменю на нормальную -->
+  <!-- Только обратил внимание, что на карте есть еще окошко с кнопкой. Помещяю все в Section, где картинка карты будет фоном? нужно ли тут в этом случае IMG вставлять? пока оставлю -->
+  <section class="map">
+    <img src="Map-picture" class="Map" width="1440" height="416" alt="Карта. Как нас найти">
+    <div class="write-us">
+      <h3>NЁRDS DESIGN STUDIO</h3><br>
+      191186, Санкт-Петербург,<br>
+      ул. Б. Конюшенная, д. 19/8<br>
+      тел. +7 (812) 275-75-75
+      <button type="button" class="write-us-button">Напишите нам</button>
+      <!-- Сделал кнопку, а не ссылку т.к. вижу окно всплывающее по клику, а перехода на другую страницу нет -->
+    </div>
+    <div>
+      <img src="" class="Logo-map" width="231" height="190" alt="Адрес отмечен на карте">
+    </div>
   </section>
+  <!-- Карту пока сделал только в каталоге т.к. точно там будет достаточно ошибок. Когда приведу в порядок, потом на главную блок скопирую -->
 </main>
-
 <footer>
   <div class="social">
     <ul>
@@ -81,14 +119,5 @@
     Скидка 10% для друзей из социальных сетей.
   </p>
 </footer>
-<!-- Пока тут сделал для карточки т.к. не совсем уверен как правильно! -->
-  <div class="catalog-item-button">
-    <a href="#">Sedona <br>
-      Информационный сайт для туристов <br>
-      <span class="price-button" 9900 Руб. </span>
-    </a>
-  </div>
-<!-- Сделал ссылкой только заголовок, так понял из ТЗ. Но мне кажется логичнее сделать ссылкой либо вообще все поле, либо хотя бы любой текст в этом блоке -->
-
 </body>
 </html>

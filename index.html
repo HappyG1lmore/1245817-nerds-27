@@ -8,16 +8,16 @@
     <header>
       <nav>
        <a>
-         <img src="Logo" alt="Логотип" width="160px" height="65px">
+         <img src="Logo" alt="Логотип" width="160" height="65">
        </a>
        <ul>
           <li><a href="#">Студия </a></li>
           <li><a href="#">Клиенты </a></li>
-          <li><a href="catalog.html">Магазин </a></li>
-          <li><a href="#">Контакты </a></li>
+          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="#">Контакты</a></li>
         </ul>
         <ul>
-          <li><a href="#"><button type="button">Корзина</button></a></li>
+          <li><a href="#" class="cart">Корзина</a></li>
         </ul>
       </nav>
     </header>
@@ -26,28 +26,63 @@
        <h2>Услуги</h2>
        <ul class="products-list">
         <li class="products-item">
-          <img class="picture-order" src="img1" width="300px" height="146px">
-          <p><h3 class="products-item-title">Веб-сайты</h3></p>
+          <img class="picture-order" src="img1" width="300" height="146" alt="Веб-сайты">
+          <h3 class="products-item-title">Веб-сайты</h3>
           <p>Мир никогда не будет прежним после того как увидит ваш сайт!</p>
-          <a class="button button-red products-item-button" href="#"> Заказать </a>
+          <a class="button button-red products-item-button" href="#">Заказать</a>
         </li>
         <li class="products-item">
-          <img class="picture-order" src="img1" width="300px" height="146px">
-          <p><h3 class="products-item-title">Приложения</h3></p>
+          <img class="picture-order" src="img1" width="300" height="146" alt="Приложения">
+          <h3 class="products-item-title">Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <a class="button button-green products-item-button" href="#"> Заказать </a>
+          <a class="button button-green products-item-button" href="#">Заказать</a>
         </li>
         <li class="products-item">
-          <img class="picture-order" src="img1" width="300px" height="146px">
-          <p><h3 class="products-item-title">Презентации</h3></p>
+          <img class="picture-order" src="img1" width="300" height="146" alt="Презентации">
+          <h3 class="products-item-title">Презентации</h3>
           <p>Вы даже не подозреваете,насколько вы изумительны!</p>
-          <a class="button button-оrange products-item-button" href="#"> Заказать </a>
+          <a class="button button-оrange products-item-button" href="#">Заказать</a>
         </li>
        </ul>
       </section>
+      <section class="About-us">
+        <div class="About-us-title">
+          <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2><br>
+          Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.<br>
+          <dl>
+            <dt>Выполняем заказы на разработку:</dt>
+            <dd>Веб-сайтов любой сложности<dd>
+            <dd>Мобильных приложений для iOS и Android<dd>
+            <dd>Слайдшоу и видео для корпоративных презентаций<dd>
+          </dl>
+          <!-- Мне кажется тут подходит список описаний, не уверен -->
+        </div>
+        <div class="About-us-info">
+          <img src="" width="360" height="208" alt="Логотип">
+          <h3>с 2004 года Любим точность во всем:</h3>
+          <dl>
+            <dt>146%</dt>
+            <dd>Уровень самоотдачи<dd>
+            <dt>100%</dt>
+            <dd>Соблюдение сроков<dd>
+            <dt>50%</dt>
+            <dd>Минимальная предоплата<dd>
+          </dl>
+        </div>
+      </section>
+      <section class="clients">
+        <h2>Клиенты</h2>
+        <ul>
+          <li><a href=""><img src="" width="199" height="68" alt="Логотип html academy"> </a></li>
+          <li><a href=""><img src="" width="209" height="90" alt="Логотип барбершопа Borodinski"> </a></li>
+          <li><a href=""><img src="" width="185" height="52" alt="Логотип Pink"> </a></li>
+          <li><a href=""><img src="" width="173" height="84" alt="Логотип Mishka"> </a></li>
+        </ul>
+        <!-- у каждого логотипа свой размер, каждому нужно прописывать? -->
+      </section>
     </main>
     <footer>
-      <div class="bsocial">
+      <div class="social">
          <ul>
           <li><a href="#">Вконтакте</a></li>
           <li><a href="#">Фейсбук</a></li>
