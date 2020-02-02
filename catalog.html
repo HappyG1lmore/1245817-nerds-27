@@ -18,7 +18,7 @@
       <li><a href="#">Контакты </a></li>
     </ul>
     <ul>
-      <li><img src="img/svg-nerds/cart-icon.svg" width="15" height="15" alt="иконка корзины"> </li>
+      <li><img src="img/svg/cart-icon.svg" width="15" height="15"> </li>
       <li><a href="#" class="cart">Корзина</a></li>
     </ul>
   </nav>
@@ -28,40 +28,60 @@
   <section class="filters">
     <h2 class="visually-hidden">Фильтры</h2>
     <!-- не знаю как связать поля где вводишь цифры с ползунком. Также ползунок с одной точкой, на макете их две-->
-    <form action="https://echo.htmlacademy.ru/courses" method="post">
+    <form action="https://echo.htmlacademy.ru" method="post">
       <fieldset>
         <legend>Стоимость:</legend>
         <input type="range" min="0" max="25000" step="1000" name="cost">
         <label for="from">От</label>
-        <input type="number" id="from">
+        <input type="number" id="from" name="from">
         <label for="to">До</label>
-        <input type="number" id="to">
+        <input type="number" id="to" name="to">
       </fieldset>
       <fieldset>
         <legend>Сетка:</legend>
-        <input type="radio" id="adaptive" name="grid" checked>
-        <label for="adaptive">Адаптивная</label>
-        <input type="radio" id="fixed" name="grid">
-        <label for="fixed">Фиксированная</label>
-        <input type="radio" id="rubber" name="grid">
-        <label for="rubber">Резиновая</label>
+        <ul>
+          <li>
+            <input type="radio" id="adaptive" name="grid" value="adaptive" checked>
+            <label for="adaptive">Адаптивная</label>
+          </li>
+          <li>
+            <input type="radio" id="fixed" name="grid" value=="fixed">
+            <label for="fixed">Фиксированная</label>
+          </li>
+          <li>
+            <input type="radio" id="rubber" name="grid" value=="rubber">
+            <label for="rubber">Резиновая</label>
+          </li>
+        </ul>
       </fieldset>
       <fieldset>
-          <legend>Особенности:</legend>
-          <input type="checkbox" id="slider" name="slider" checked>
-          <label for="slider">Слайдер</label>
-          <input type="checkbox" id="advantage" name="advantage">
-          <label for="advantage">Блок преимуществ</label>
-          <input type="checkbox" id="news" name="news" checked>
-          <label for="news">Новости</label>
-          <input type="checkbox" id="gallery" name="gallery">
-          <label for="gallery">Галерея</label>
-          <input type="checkbox" id="cart" name="cart">
-          <label for="cart">Корзина</label>
+        <legend>Особенности:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" id="slider" name="features" value="slider" checked>
+            <label for="slider">Слайдер</label>
+          </li>
+          <li>
+            <input type="checkbox" id="advantage" name="features" value="advantage">
+            <label for="advantage">Блок преимуществ</label>
+          </li>
+          <li>
+            <input type="checkbox" id="news" name="features" value="news" checked>
+            <label for="news">Новости</label>
+          </li>
+          <li>
+            <input type="checkbox" id="gallery" name="features" value="gallery">
+            <label for="gallery">Галерея</label>
+          </li>
+          <li>
+            <input type="checkbox" id="cart" name="features" value="cart">
+            <label for="cart">Корзина</label>
+          </li>
+        </ul>
        </fieldset>
       <button type="submit">показать</button>
     </form>
-    </section>
+  </section>
   <section class="sort">
     <h2>Сортировать:</h2>
     <ul>
@@ -77,27 +97,49 @@
   <section class="catalog">
     <ul>
       <li>
-        <img src="img/qwerty/catalog1.jpg" width="360" height="576" alt="Sedona - информационный сайт для туристов">
+        <img src="img/catalog/catalog1.jpg" width="360" height="576" alt="Sedona - информационный сайт для туристов">
         <div class="catalog-item-Info">
-          <h3> <a href="#">Sedona </a></h3>
+          <h3> <a href="#">Sedona</a></h3>
           <p>Информационный сайт для туристов</p>
           <span class="price-button"> 9900 Руб. </span>
         </div>
       </li>
       <li>
-        <img src="img/qwerty/catalog2.jpg" width="360" height="576" alt="Pink APP- Продуктовый лендинг приложения для iOS и Android">
+        <img src="img/catalog/catalog2.jpg" width="360" height="576" alt="Pink APP- Продуктовый лендинг приложения для iOS и Android">
+        <div class="catalog-item-Info">
+          <h3> <a href="#">Pink APP</a></h3>
+          <p>Pink APP- Продуктовый лендинг приложения для iOS и Android</p>
+          <span class="price-button"> 9900 Руб. </span>
+        </div>
       </li>
       <li>
-        <img src="img/qwerty/catalog3.jpg" width="360" height="576" alt="Barbershop- Сайт салона красоты. Для мужчин, да.">
+        <img src="img/catalog/catalog3.jpg" width="360" height="576" alt="Barbershop- Сайт салона красоты. Для мужчин, да.">
+        <div class="catalog-item-Info">
+          <h3> <a href="#">Barbershop</a></h3>
+          <p>Сайт салона красоты. Для мужчин, да.</p>
+          <span class="price-button"> 9900 Руб. </span>
+        </div>
       </li>
       <li>
-        <img src="img/qwerty/catalog4.jpg" width="360" height="576" alt="Mishka- Интернет-магазин вязаных игрушек">
+        <img src="img/catalog/catalog4.jpg" width="360" height="576" alt="Mishka- Интернет-магазин вязаных игрушек">
+        <div class="catalog-item-Info">
+          <h3> <a href="#">Mishka</a></h3>
+          <p>Интернет-магазин вязаных игрушек</p>
+          <span class="price-button"> 9900 Руб. </span>
       </li>
       <li>
-         <img src="img/qwerty/catalog5.jpg" width="360" height="576" alt="A plus- Лендинг курсов повышения квалификации">
+        <img src="img/catalog/catalog5.jpg" width="360" height="576" alt="A plus- Лендинг курсов повышения квалификации">
+        <div class="catalog-item-Info">
+          <h3> <a href="#">A plus</a></h3>
+          <p>Лендинг курсов повышения квалификации</p>
+          <span class="price-button"> 9900 Руб. </span>
       </li>
       <li>
-         <img src="img/qwerty/catalog6.jpg" width="360" height="576" alt="Кваст- Промо-сайт производителя крафтового кваса">
+        <img src="img/catalog/catalog6.jpg" width="360" height="576" alt="Кваст- Промо-сайт производителя крафтового кваса">
+        <div class="catalog-item-Info">
+          <h3> <a href="#">Кваст</a></h3>
+          <p>Промо-сайт производителя крафтового кваса</p>
+          <span class="price-button"> 9900 Руб. </span>
       </li>
     </ul>
     <ul>
@@ -123,14 +165,31 @@
 <footer>
   <div class="social">
     <ul>
-      <li><a href="#"><img src="img/svg-nerds/vk-icon.svg" width="26" height="15" alt="Логотип социальной сети Вконтакте" style="background-color:black;"></a></li>
-      <li><a href="#"><img src="img/svg-nerds/fb-icon.svg" width="12" height="22" alt="Логотип социальной сети Фейсбук" style="background-color:black;"></a></li>
-      <li><a href="#"><img src="img/svg-nerds/insta-icon.svg" width="21" height="21" alt="Логотип социальной сети Инстаграм" style="background-color:black;"></a></li>
+      <li><a href="#"><img src="img/svg/vk-icon.svg" width="26" height="15" style="background-color:black;"></a></li>
+      <li><a href="#"><img src="img/svg/fb-icon.svg" width="12" height="22" style="background-color:black;"></a></li>
+      <li><a href="#"><img src="img/svg/insta-icon.svg" width="21" height="21" style="background-color:black;"></a></li>
     </ul>
   </div>
   <p class="footer-text"> <span class="footer-slogan">Давайте дружить, это выгодно!</span>
     Скидка 10% для друзей из социальных сетей.
   </p>
 </footer>
+
+<section class="write-us">
+  <h2>Напишите нам</h2>
+  <form action="https://echo.htmlacademy.ru" method="post">
+    <label for="name">Ваше имя:</label>
+    <input type="text" name="name" placeholder="Имя Фамилия" id="name">
+    <label for="email">Ваш e-mail:</label>
+    <input type="email" name="email" placeholder="email@example.com" id="email">
+    <p>
+      <label for="text">Текст письма:</label>
+      <textarea rows="5" cols="65" id="text" placeholder="В свободной форме" name="text"></textarea>
+    </p>
+    <button type="submit">Отправить</button>
+    <button type="button">Закрыть</button>
+  </form>
+
+</section>
 </body>
 </html>
