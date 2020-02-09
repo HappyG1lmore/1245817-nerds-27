@@ -3,53 +3,58 @@
   <head>
     <meta charset="utf-8">
     <title>Магазин готовых шаблонов - Нёрдс</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
-    <header>
-      <nav>
+    <header class="site-header">
+      <nav class="main-navigation">
        <a>
          <img src="img/nerds-logo.svg" alt="Логотип" width="160" height="65">
        </a>
-       <ul>
+       <ul class="site-navigation">
           <li><a href="#">Студия </a></li>
           <li><a href="#">Клиенты </a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <ul>
-          <li><img src="img/svg/cart-icon.svg" width="15" height="15"> </li>
-          <li><a href="#" class="cart">Корзина</a></li>
+        <ul class="cart-navigation">
+           <li><a href="#" class="cart-link">Корзина</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-
-      <section class="slider1">
-        <h2>Долго, дорого,<br>
+     <section class="slider header-color">
+       <ul>
+        <li>
+          <h2>Долго, дорого,<br>
           скрупулезно.</h2>
-        <p>Математически выверенный дизайн<br>
+          <p>Математически выверенный дизайн<br>
           для вашего сайта или мобильного приложения.</p>
-        <a href="#" class="slider-button">Узнать больше</a>
-        <img src="img/slide1.png" width="698" height="413" alt="Смартфон перемещается в пространстве как украшение слайдера">
-      </section>
-      <section class="slider2">
-        <h2>Любим математику<br>
+          <a href="#" class="button">Узнать больше</a>
+          <img src="img/slide1.png" width="698" height="413" alt="Смартфон перемещается в пространстве как украшение слайдера">
+        </li>
+        <li>
+          <h2>Любим математику<br>
           как никто другой</h2>
-        <p>Никакого креатива, только математические формулы<br>
+          <p>Никакого креатива, только математические формулы<br>
           для расчета идеальных пропорций.</p>
-        <a href="#" class="slider-button">Узнать больше</a>
-        <img src="img/slide2.png" width="663" height="430" alt="Два современных монитора смотрят в разные стороны, на экране синий интерфейс">
-      </section>
-      <section class="slider1">
-        <h2>Только ночь,<br>
+          <a href="#" class="button">Узнать больше</a>
+          <img src="img/slide2.png" width="663" height="430" alt="Два современных монитора смотрят в разные стороны, на экране синий интерфейс">
+        </li>
+        <li>
+          <h2>Только ночь,<br>
           только хардкор</h2>
-        <p>Работать днем, как все? Мы против этого.<br>
+          <p>Работать днем, как все? Мы против этого.<br>
           Ближе к полуночи работа только начинается.</p>
-        <a href="#" class="slider-button">Узнать больше</a>
-        <img src="img/slide3.png" width="759" height="411" alt="Айпад и Айфон белого цвета с синим интерфейсом на экранах">
-      </section>
+          <a href="#" class="button">Узнать больше</a>
+          <img src="img/slide3.png" width="759" height="411" alt="Айпад и Айфон белого цвета с синим интерфейсом на экранах">
+        </li>
+       </ul>
+     </section>
 
 
       <section class="products">
@@ -77,8 +82,8 @@
       </section>
       <section class="about-us">
         <div class="about-us-title">
-          <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.
-          Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</h2>
+          <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
+          <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
           <b>Выполняем заказы на разработку:</b>
           <ul>
             <li>Веб-сайтов любой сложности</li>
@@ -89,11 +94,11 @@
         <div class="about-us-info">
           <img src="img/logo-us.png" width="360" height="208" alt="Логотип">
           <table>
-            <caption>с 2004 года Любим точность во всем:</caption>
+            <caption><b>с 2004 года Любим точность во всем:</b></caption>
             <tr>
-              <td>146%</td>
-              <td>100%</td>
-              <td>50%</td>
+              <th>146%</th>
+              <th>100%</th>
+              <th>50%</th>
             </tr>
             <tr>
               <td>Уровень самоотдачи</td>
@@ -106,10 +111,10 @@
       <section class="clients">
         <h2 class="visually-hidden">Клиенты</h2>
         <ul>
-          <li><a href="#"><img src="img/logo-1.png" width="199" height="68" alt="Логотип html academy"> </a></li>
-          <li><a href="#"><img src="img/logo-2.png" width="209" height="90" alt="Логотип барбершопа Borodinski"> </a></li>
-          <li><a href="#"><img src="img/logo-3.png" width="185" height="52" alt="Логотип Pink"> </a></li>
-          <li><a href="#"><img src="img/logo-4.png" width="173" height="84" alt="Логотип Mishka"> </a></li>
+          <li><a href="#"><img src="img/logo-1.png" class="html" width="199" height="68" alt="Логотип html academy"> </a></li>
+          <li><a href="#"><img src="img/logo-2.png" class="borodinski" width="209" height="90" alt="Логотип барбершопа Borodinski"> </a></li>
+          <li><a href="#"><img src="img/logo-3.png" class="pink" width="185" height="52" alt="Логотип Pink"> </a></li>
+          <li><a href="#"><img src="img/logo-4.png" class="mishka" width="173" height="84" alt="Логотип Mishka"> </a></li>
         </ul>
       </section>
       <section class="map">
@@ -120,7 +125,7 @@
             ул. Б. Конюшенная, д. 19/8
           </address>
           <p>тел. <a href="+78122757575"> +7 (812) 275-75-75</a></p>
-          <a href="#" class="write-us-button">Напишите нам</a>
+          <a href="#" class="button write-us-button">Напишите нам</a>
         </div>
       </section>
     </main>
@@ -128,17 +133,18 @@
     <footer>
       <div class="social">
          <ul>
-           <li><a href="#"><img src="img/svg/vk-icon.svg" width="26" height="15" alt="Логотип социальной сети Вконтакте" style="background-color:black;"></a></li>
-           <li><a href="#"><img src="img/svg/fb-icon.svg" width="12" height="22" alt="Логотип социальной сети Фейсбук" style="background-color:black;"></a></li>
-           <li><a href="#"><img src="img/svg/insta-icon.svg" width="21" height="21" alt="Логотип социальной сети Инстаграм" style="background-color:black;"></a></li>
+           <li><a href="#"><img src="img/svg/vk-icon.svg" width="26" height="15"> </a></li>
+           <li><a href="#"><img src="img/svg/fb-icon.svg" width="12" height="22" ></a></li>
+           <li><a href="#"><img src="img/svg/insta-icon.svg" width="21" height="21"></a></li>
         </ul>
       </div>
-      <p class="footer-text"> <span class="footer-slogan">Давайте дружить, это выгодно!</span>
-        Скидка 10% для друзей из социальных сетей.
-      </p>
+      <div class="footer-text"> <p class="footer-slogan">Давайте дружить, это выгодно!</p>
+        <p>Скидка 10% для друзей из социальных сетей.</p>
+      </div>
     </footer>
 
-    <section class="write-us">
+    <section class="modal-write-us">
+      <button type="button">Закрыть</button>
       <h2>Напишите нам</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
         <label for="name">Ваше имя:</label>
@@ -149,8 +155,7 @@
           <label for="text">Текст письма:</label>
           <textarea rows="5" cols="65" id="text" placeholder="В свободной форме" name="text"></textarea>
         </p>
-        <button type="submit">Отправить</button>
-        <button type="button">Закрыть</button>
+        <button type="submit" class="button">Отправить</button>
       </form>
     </section>
 
