@@ -3,11 +3,17 @@ body {
   padding: 0;
   margin:0;
 
-  font-family: "Roboto", "Calibri", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: normal;
   min-width: 1200px;
+}
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 a {
@@ -16,7 +22,6 @@ a {
 
 .visuallyhidden:not(:focus):not(:active)  {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -28,6 +33,15 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 1260px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
@@ -76,25 +90,20 @@ a {
  }
 .main-navigation {
   display: flex;
-  width: 1160px;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-}
+ }
 .site-navigation {
   display: flex;
   min-width: 440px;
   justify-content: space-between;
-  margin: auto;
 }
-
-
 
 /* Слайдер ========================*/
 .slider ul {
   list-style: none;
   padding: 0px;
-}
+ }
 .slider h2 {
  font-size: 55px;
  line-height: 55px;
@@ -106,6 +115,7 @@ a {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
+  border: none;
 }
 .button:hover {
   background-color: #e74246;
@@ -130,9 +140,14 @@ a {
 }
 
 /* Услуги (разноцветные кнопки) ========================*/
+.products {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
 .products-list {
   list-style: none;
   padding: 0px;
+  margin: 0;
 }
 .products-item-title {
   text-transform: uppercase;
@@ -166,18 +181,11 @@ a {
   background-color: #e5a722;
 }
 
-.products {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
 .products-list {
   display: flex;
   width: 1160px;
   justify-content: space-between;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  }
+}
 .products-item p {
   width: 250px;
 }
@@ -227,14 +235,12 @@ a {
   display: flex;
   width: 100%;
   justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 .about-us-wrapper {
-  display: flex;
-   width: 1160px;
   justify-content: space-between;
-  margin-top: 40px;
-  margin-bottom: 76px;
-}
+  }
 .about-us-title {
   width: 650px;
 }
@@ -243,6 +249,11 @@ a {
 }
 
 /* Клиенты =====================================*/
+.clients {
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+
 .clients ul {
   list-style: none;
   padding: 0px;
@@ -259,11 +270,7 @@ a {
   opacity:0.1;
 }
 .clients {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  margin-top: 45px;
-  margin-bottom: 45px;
+
 }
 .clients-list {
   display: flex;
@@ -297,8 +304,9 @@ a {
 }
 .map {
   display: flex;
-  width: 1440px;
   flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 69px;
 }
 .write-us-map {
   display: block;
@@ -306,7 +314,10 @@ a {
   width: 319px;
   padding: 54px 50px 47px;
 }
-
+iframe {
+  height: 416px;
+  width: auto;
+}
 address {
   width: 220px;
 }
@@ -348,8 +359,6 @@ footer {
 }
 
 .social-wrapper {
-  display: flex;
-  width: 1160px;
   justify-content: flex-start;
   align-items: center;
 }
@@ -366,19 +375,11 @@ footer {
 }
 /* Всплывающее окно =====================================*/
 .modal-write-us {
-  width: 960px;
-  height: 590px;
-  display: flex;
-  justify-content: center;
+  display: none;
 }
 
- .wrapper-write-us {
-  width: 760px;
-  height: 435px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+ .wrapper-write-us {}
+
 .wrapper-title {
   display: flex;
   justify-content: space-between;
@@ -400,11 +401,23 @@ footer {
   color: #e74246;
   border: solid 2px #e74246;
 }
-
+/* Страница каталога All =====================================*/
+.container-center {
+  justify-content: center;
+}
+.page-title {
+  margin:0;
+}
+.slide-catalog {
+  padding-bottom: 110px;
+  padding-top: 70px;
+}
 
 /* Каталог фильтры =====================================*/
-  .filters fieldset {
+.filters fieldset {
   border: none;
+  padding: 0px;
+  margin: 0px;
 }
 .filters legend {
   text-transform: uppercase;
@@ -421,13 +434,30 @@ footer {
 }
 .filters ul {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 .filters .button-filter {
   border: none;
   background-color: #eeeeee;
   color: black;
-
 }
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  height: 775px;
+  justify-content: space-between;
+ }
+.filters {
+  display: flex;
+}
+
+
+fieldset {
+  display: flex;
+}
+
 
 /* сортировка =====================================*/
 .sort ul {
@@ -456,14 +486,26 @@ footer {
 .sort .button-active {
   color: #000000;
 }
+.sort {
+  display: flex;
+  justify-content: flex-end;
+}
+.sort-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+}
 /* Каталог =====================================*/
 main .page-title {
   font-size: 55px;
   line-height: 55px;
 }
+.crp {display: flex}
 
-.catalog ul {
+.cards ul {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 .catalog h3 {
   font-size: 18px;
@@ -507,4 +549,23 @@ main .page-title {
 .pagination-item-current { /* пока сделал так активную*/
   border:1px solid #eeeeee;
   background-color: white;
+}
+
+.cards-lists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.offers {
+  display: flex;
+  width: 760px;
+  flex-direction: column;
+}
+.catalog-wrapper {
+  display: flex;
+}
+.pagination-list {
+  display: flex;
+  flex-direction: row;
 }
