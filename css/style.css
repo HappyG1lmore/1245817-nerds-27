@@ -37,9 +37,9 @@ a {
 
 .container {
   display: flex;
-  width: 1260px;
-  padding-left: 50px;
-  padding-right: 50px;
+  width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -418,6 +418,7 @@ footer {
   border: none;
   padding: 0px;
   margin: 0px;
+  padding-bottom: 50px;
 }
 .filters legend {
   text-transform: uppercase;
@@ -445,16 +446,17 @@ footer {
 .form-wrapper {
   display: flex;
   flex-direction: column;
-  width: 260px;
-  height: 775px;
-  justify-content: space-between;
- }
+}
 .filters {
   display: flex;
+  padding-top: 55px;
+  padding-right: 140px;
+}
+.filters .price {
+  padding-bottom: 50px;
 }
 
-
-fieldset {
+.filters fieldset {
   display: flex;
 }
 
@@ -462,10 +464,13 @@ fieldset {
 /* сортировка =====================================*/
 .sort ul {
   list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 .sort li {
   font-size: 14px;
   line-height: 18px;
+
 }
 .sort a {
   color: rgba(0, 0, 0, 0.3);
@@ -476,6 +481,7 @@ fieldset {
  font-size: 18px;
  line-height: 18px;
  font-weight: bold;
+  margin: 0px;
 }
 .sort a:hover {
   color: rgba(0, 0, 0, 0.6);
@@ -488,13 +494,27 @@ fieldset {
 }
 .sort {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  padding-top: 60px;
+  padding-bottom: 50px;
 }
 .sort-wrapper {
   display: flex;
-  justify-content: space-between;
+  }
 
+.sort h2{
+  padding-right: 200px;
 }
+.sort-wrapper:first-of-type {
+  padding-right: 45px;
+}
+.sort-wrapper:first-of-type li {
+  padding-right: 26px;
+}
+.sort-wrapper li:last-child {
+  padding-right: 0px;
+}
+
 /* Каталог =====================================*/
 main .page-title {
   font-size: 55px;
