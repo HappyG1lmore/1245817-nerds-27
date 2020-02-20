@@ -97,6 +97,30 @@ a {
   display: flex;
   min-width: 440px;
   justify-content: space-between;
+  margin: 0px;
+}
+.cart-navigation {
+  display: flex;
+  max-width: 120px;
+  position: relative;
+  margin: 0px;
+}
+
+.cart-navigation .cart-link{
+  padding-left: 45px;
+ }
+
+.cart-link::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 7px;
+  width: 16px;
+  height: 18px;
+
+  background-image: url("../img/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 /* Слайдер ========================*/
@@ -105,18 +129,49 @@ a {
   padding: 0px;
  }
 .slider h2 {
+  display: inline-block;
  font-size: 55px;
  line-height: 55px;
  font-weight: 500;
+ margin: 0px;
+ padding-bottom: 14px;
 }
+
+.slide-text p {
+  display: inline-block;
+  padding-top: 14px;
+  padding-bottom: 46px;
+  margin: 0px;
+  }
+
 .button {
+  display: inline-block;
   color: #ffffff;
   background-color: #fb565a;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 18px;
   border: none;
+  padding: 16px 53px;
 }
+
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: #fb565a;
+}
+.button-оrange.disabled{
+  cursor: default;
+  opacity: 0.5;
+  background-color: #efc84a;
+}
+.button-green.disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: #00ca74;
+}
+/*я понимаю что кнопкив предложениях не могут быть не активными и можно было не делать, но я пробовал просто делать кнопки разных цветов */
 .button:hover {
   background-color: #e74246;
 }
@@ -138,6 +193,8 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+.slide2,
+.slide3 {display: none}
 
 /* Услуги (разноцветные кнопки) ========================*/
 .products {
@@ -149,6 +206,17 @@ a {
   padding: 0px;
   margin: 0;
 }
+.products h3 {
+  margin: 0px;
+  padding: 26px 0px;
+  }
+
+.products p{
+  margin: 0px;
+  padding-bottom: 35px;
+}
+
+
 .products-item-title {
   text-transform: uppercase;
   font-size: 24px;
@@ -196,9 +264,21 @@ a {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
+  margin: 0px;
+  padding-bottom: 35px;
   }
+.about-us p {
+  margin: 0px;
+  padding-bottom: 47px;
+}
+.about-us b {
+  display: inline-block;
+  padding-bottom: 35px;
+}
+
 .about-us ul {
-  list-style: none; /* Заменить на необходимый, пока просто убрал маркеры !!!!!!!!!!!!!*/
+  list-style: none;
+  margin: 0px;
 }
 .about-us th {
   font-size: 45px;
@@ -247,6 +327,9 @@ a {
 .about-us-info {
   width: 360px;
 }
+.about-us-title-ul li {
+ padding-bottom: 33px;
+  }
 
 /* Клиенты =====================================*/
 .clients {
@@ -281,47 +364,77 @@ a {
 /* Карта =====================================*/
 
 .write-us-map {
-  background-size: 319px,319px; /* пытаюсь всему диву бекграунд белый сделать этого размера*/
+  background-size: 319px,319px;
   font-size: 16px;
   line-height: 18px;
   color: #666666;
+
 }
 .write-us-map a {
   color: #666666;
 }
 .write-us-map .button {
   color: white;
+  padding: 19px 39px;
 }
+
 .write-us-map h3 {
   font-size: 18px;
   font-weight: bold;
   line-height: 30px;
   color: #000000;
   text-transform: uppercase;
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 16px;
 }
 .write-us-map address {
   font-style: normal;
+  width: 205px;
+  margin: 0px;
+  padding-top: 16px;
+  padding-bottom: 20px;
 }
+
 .map {
   display: flex;
   flex-direction: column;
   padding-top: 80px;
   padding-bottom: 69px;
+  position: relative;
 }
 .write-us-map {
   display: block;
   flex-direction: column;
   width: 319px;
-  padding: 54px 50px 47px;
 }
+
+.write-us-map p {
+  margin: 0px;
+  padding-bottom: 37px;
+}
+
 iframe {
-  height: 416px;
-  width: auto;
+  position: absolute;
+  height: 420px;
+  width: 100%;
+  z-index: 2;
 }
-address {
-  width: 220px;
+
+.map .container {
+  position: relative;
+  }
+.map .write-us-map {
+  position: absolute;
+  left: 0px;
+  top: 54px;
+  background-color: white;
+  padding: 54px 50px 47px;
+  z-index: 3;
 }
+
 /* Футер =====================================*/
+
 .social ul {
   list-style: none;
   padding: 0px;
@@ -330,7 +443,9 @@ address {
 .social a{
   background-color: #e1e1e1;
   background-size: 79px 79px;
+  padding: 28px;
 }
+
 .social a:hover,
 .social a:focus {
   background-color: #e74246;
