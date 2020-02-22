@@ -19,6 +19,15 @@ html {
 a {
   text-decoration: none;
   }
+button,
+input,
+select,
+textarea {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+}
 
 .visuallyhidden:not(:focus):not(:active)  {
   position: absolute;
@@ -60,10 +69,10 @@ a {
   text-transform: uppercase;
   font-size: 16px;
 }
-.site-navigation a:hover {
+.main-navigation a:hover:not(:last-child) {
   opacity: 80%;
 }
-.site-navigation a:active {
+.main-navigation a:active:not(:last-child) {
   opacity: 30%;
 }
 
@@ -140,8 +149,6 @@ a {
 }
 
 
-
-
 /* Слайдер ========================*/
 .slider ul {
   list-style: none;
@@ -190,13 +197,14 @@ a {
   opacity: 0.5;
   background-color: #00ca74;
 }
-/*я понимаю что кнопкив предложениях не могут быть не активными и можно было не делать, но я пробовал просто делать кнопки разных цветов */
 .button:hover {
   background-color: #e74246;
 }
 .button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #d7373b;
+  border: none;
+  box-shadow: inset 0px 3px 0px 0px rgba(0, 1, 1, 0.1);
 }
 
 .slider-wrapper {
@@ -586,15 +594,64 @@ footer {
 }
 
 /* Всплывающее окно =====================================*/
-.modal-write-us {
-  display: none;
+.modal {
+  position: relative;
 }
 
- .wrapper-write-us {}
+.modal-write-us {
+  display: flex;
+  justify-content: center;
+  width: 960px;
+  height: 590px;
+  box-shadow: 0px 20px 40px 0px rgba(0, 1, 1, 0.75);
+  position: absolute;
+  left: 50%;
+  margin-left: -480px;
+ }
+ .wrapper-write-us {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
 
 .wrapper-title {
+  position: relative;
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
+  align-items: center;
+  padding-bottom: 47px;
+}
+.wrapper-title h2 {
+  font-size: 45px;
+  font-weight: normal;
+  line-height: 45px;
+  margin: 0px;
+  }
+.form {
+  display: flex;
+  width: 760px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form-item {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+.form-item.area {
+  width: 100%;
+  padding-top: 36px;
+  padding-bottom: 47px;
+}
+.button-write-us {
+  border: none;
+  background: none;
+  width: 25px;
+  height: 25px;
+}
+.button-write-us::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21'%3E%3Cpath fill='%23FB565A' d='M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z'/%3E%3C/svg%3E");
 }
 
   .modal-write-us input,
@@ -655,6 +712,18 @@ footer {
   background-color: #eeeeee;
   color: black;
 }
+.filters .button-filter:hover {
+  background-color: #dfdfdf;
+  }
+.filters .button-filter:active {
+  background-color: #d5d5d5;
+  opacity: 0.3;
+  }
+
+
+
+
+
 .form-wrapper {
   display: flex;
   flex-direction: column;
@@ -662,7 +731,7 @@ footer {
 .filters {
   display: flex;
   padding-top: 55px;
-  padding-right: 140px;
+  padding-right: 135px;
 }
 .filters .price {
   padding-bottom: 50px;
@@ -672,8 +741,186 @@ footer {
   display: flex;
 }
 
+.filter-item {
+  margin: 0;
+  padding: 0;
 
-/* сортировка =====================================*/
+  border: none;
+}
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+.range-controls {
+  position: relative;
+  height: 80px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f1f1f1;
+
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  cursor: pointer;
+}
+.range-controls .toggle-min {
+  left: 18px;
+}
+
+.range-controls .toggle-max {
+  left: 160px;
+}
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.price-controls input {
+  width: 80px;
+  padding: 8px 10px;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1
+}
+.max-price {
+  text-align: right;
+}
+.check {
+  position: relative;
+  padding-left: 25px;
+  z-index: 1;
+}
+.check_input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.check_box {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath fill='%234D4D4D' d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 20px ;
+  opacity: 0.4;
+}
+
+.check_input:checked + .check_box {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath fill='%234D4D4D' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%234D4D4D' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E%0A");
+}
+
+.check_box_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ }
+.check_box_item:hover .check_box {
+  opacity: 1;
+}
+
+.check_input:disabled~.check_box,
+.check_input:disabled~.check {
+ opacity: 0.1;
+}
+
+
+                 /* --- radio --- */
+
+.radio {
+  position: relative;
+  padding-left: 25px;
+  z-index: 1;
+}
+.radio_input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.radio_wrap {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%234D4D4D' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 20px ;
+  opacity: 0.4;
+}
+.radio_input:checked + .radio_wrap {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25'%3E%3Cpath fill='%234D4D4D' d='M12.5 4c4.687 0 8.5 3.813 8.5 8.5 0 4.687-3.813 8.5-8.5 8.5C7.813 21 4 17.187 4 12.5 4 7.813 7.813 4 12.5 4m0-4C5.597 0 0 5.597 0 12.5S5.597 25 12.5 25 25 19.403 25 12.5 19.403 0 12.5 0z'/%3E%3Ccircle fill='%234D4D4D' cx='12.5' cy='12.5' r='4.5'/%3E%3C/svg%3E%0A");
+}
+.radio_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.radio_item:hover .radio_wrap {
+  opacity: 1;
+}
+
+.radio_input:disabled~.radio,
+.radio_input:disabled~.radio_wrap {
+  opacity: 0.1;
+}
+
+
+  /* сортировка =====================================*/
 .sort ul {
   list-style: none;
   padding: 0px;
@@ -697,6 +944,7 @@ footer {
 }
 .sort a:hover {
   color: rgba(0, 0, 0, 0.6);
+  fill: red;
 }
 .sort a:active {
   color: #000000;
@@ -706,19 +954,24 @@ footer {
 }
 .sort {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   padding-top: 60px;
   padding-bottom: 50px;
 }
+.sort h2 {
+  margin-right: auto;
+  padding-right: 100px;
+}
+
 .sort-wrapper {
   display: flex;
-  }
-
-.sort h2{
-  padding-right: 200px;
 }
+.sort-wrapper .increase {
+  padding-left: 18px;
+}
+
 .sort-wrapper:first-of-type {
-  padding-right: 45px;
+  padding-right: 48px;
 }
 .sort-wrapper:first-of-type li {
   padding-right: 26px;
@@ -726,6 +979,35 @@ footer {
 .sort-wrapper li:last-child {
   padding-right: 0px;
 }
+.sort-wrapper .decrease::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23a6a6a6' d='M5.5 10L0 0h11'/%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+.sort-wrapper .increase::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23a6a6a6' d='M5.5 0L0 10h11z'/%3E%3C/svg%3E");
+  opacity: 0.3;
+}
+
+.sort-wrapper .decrease:hover::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23a6a6a6' d='M5.5 10L0 0h11'/%3E%3C/svg%3E");
+  opacity: 1;
+}
+.sort-wrapper .increase:hover::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23a6a6a6' d='M5.5 0L0 10h11z'/%3E%3C/svg%3E");
+  opacity: 1;
+}
+.sort-wrapper .decrease:active::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23231F20' d='M5.5 10L0 0h11'/%3E%3C/svg%3E");
+}
+.sort-wrapper .increase:active::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23231F20' d='M5.5 0L0 10h11z'/%3E%3C/svg%3E");
+}
+.sort-wrapper .decrease.active::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='10' viewBox='0 0 11 10'%3E%3Cpath fill='%23231F20' d='M5.5 10L0 0h11'/%3E%3C/svg%3E");
+  opacity: 1;
+}
+
+
 
 /* Каталог =====================================*/
 main .page-title {
@@ -751,11 +1033,25 @@ main .page-title {
   line-height: 18px;
   font-size: 16px;
 }
+
+.catalog-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #eeeeee;
+  width: 360px;
+  height: 231px;
+}
 .catalog-item-info a {
   font-size: 18px;
   font-weight: bold;
   color: #000000;
 }
+.catalog-item-info p {
+  max-width: 225px;
+  text-align: center;
+}
+
 .catalog-item-info a:hover {
   color: #fb565a;
 }
@@ -766,21 +1062,57 @@ main .page-title {
 .catalog .price-button {
   color: #ffffff;
 }
+.catalog-items .price-button:active {
+  color: #ffffff;
+}
+.catalog-items .price-button:hover {
+  color: #ffffff;
+}
 
 .pagination-list {
   list-style: none;
+  display: flex;
+  justify-content: flex-start;
 }
+.pagination-list .pagination-item {
+  display: inline-block;
+  justify-content: flex-start;
+  padding-right: 11px;
+ }
+
 .pagination-list a{
-  font-size: 16px;
-  line-height: 18px;
+  display: flex;
   color: #000000;
-}
-.pagination-item {
   background-color: #eeeeee;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
 }
-.pagination-item-current { /* пока сделал так активную*/
-  border:1px solid #eeeeee;
-  background-color: white;
+
+.pagination-item .next {
+  height: 50px;
+  width: auto;
+  padding: 0px 78px;
+}
+
+.pagination-list a.current {
+  background: none;
+  border:3px solid #eeeeee;
+}
+.pagination-list a:hover:not(.current) {
+  background-color: #dfdfdf;
+  color: black;
+}
+.pagination-list a:active {
+  background-color: #d5d5d5;
+  color: black;
+}
+.pagination-list a.current:active {
+  color: black;
+  background: none;
+  box-shadow: none;
 }
 
 .cards-lists {
@@ -788,6 +1120,38 @@ main .page-title {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.cards-lists li {
+  width: 360px;
+  position: relative;
+  padding-bottom: 33px;
+  padding-top: 40px;
+}
+.catalog-item-info {
+  position: absolute;
+  bottom: 40px;
+  display: none;
+}
+.catalog-items::after {
+  content: url("../img/svg/browser.svg");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0.12;
+}
+.catalog-items:hover::after {
+  content: url("../img/svg/browser.svg");
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+}
+
+.catalog-items:hover .catalog-item-info{
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+}
+
 
 .offers {
   display: flex;
@@ -796,8 +1160,4 @@ main .page-title {
 }
 .catalog-wrapper {
   display: flex;
-}
-.pagination-list {
-  display: flex;
-  flex-direction: row;
 }

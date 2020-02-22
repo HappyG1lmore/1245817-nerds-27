@@ -21,7 +21,7 @@
          <li><a href="#">Контакты </a></li>
        </ul>
        <ul class="cart-navigation">
-         <li><a href="#" class="cart">Корзина</a></li>
+         <li><a class="cart-link" href="#" class="cart-link">Корзина</a></li>
        </ul>
       </nav>
     </header>
@@ -39,61 +39,77 @@
         <h2 class="visuallyhidden">Фильтры</h2>
         <form action="https://echo.htmlacademy.ru" method="post" class="form-wrapper">
 
-         <fieldset>
+         <fieldset class="filter-item">
            <legend class="price">Стоимость:</legend>
-           <input type="range" min="0" max="25000" step="1000" name="cost">
-           <label for="from">От</label>
-           <input type="number" id="from" name="from">
-           <label for="to">До</label>
-           <input type="number" id="to" name="to">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                 <label class="min-price">от <input name="min-price" type="number" value="0"></label>
+                 <label class="max-price">до <input name="max-price" type="number" value="15000"></label>
+              </div>
+            </div>
+
+
          </fieldset>
 
          <fieldset>
-           <legend>Сетка:</legend>
-           <ul>
-            <li>
-              <input type="radio" id="adaptive" name="grid" value="adaptive" checked>
-              <label for="adaptive">Адаптивная</label>
+          <legend>Сетка:</legend>
+          <ul class="radio_list">
+           <li class="radio_item">
+              <input class="radio_input" type="radio" id="adaptive" name="grid" value="adaptive" checked>
+              <span class="radio_wrap"></span>
+              <label class="radio" for="adaptive">Адаптивная</label>
             </li>
-            <li>
-              <input type="radio" id="fixed" name="grid" value="fixed">
-              <label for="fixed">Фиксированная</label>
+            <li class="radio_item">
+              <input class="radio_input" type="radio" id="fixed" name="grid" value="fixed">
+              <span class="radio_wrap"></span>
+              <label class="radio" for="fixed">Фиксированная</label>
             </li>
-            <li>
-              <input type="radio" id="rubber" name="grid" value="rubber">
-              <label for="rubber">Резиновая</label>
+            <li class="radio_item">
+              <input class="radio_input" type="radio" id="rubber" name="grid" value="rubber">
+              <span class="radio_wrap"></span>
+              <label class="radio" for="rubber">Резиновая</label>
             </li>
            </ul>
          </fieldset>
 
          <fieldset>
            <legend>Особенности:</legend>
-           <ul>
-            <li>
-              <input type="checkbox" id="slider" name="features" value="slider" checked>
-              <label for="slider">Слайдер</label>
+           <ul class="check_box_list">
+            <li class="check_box_item">
+              <input class="check_input" type="checkbox" id="slider" name="features" value="slider" checked>
+              <span class="check_box"></span>
+              <label class="check" for="slider">Слайдер</label>
             </li>
-            <li>
-              <input type="checkbox" id="advantage" name="features" value="advantage">
-              <label for="advantage">Блок преимуществ</label>
+            <li class="check_box_item">
+              <input class="check_input" type="checkbox" id="advantage" name="features" value="advantage">
+              <span class="check_box"></span>
+              <label class="check" for="advantage">Блок преимуществ</label>
             </li>
-            <li>
-              <input type="checkbox" id="news" name="features" value="news" checked>
-              <label for="news">Новости</label>
+            <li class="check_box_item">
+              <input class="check_input" type="checkbox" id="news" name="features" value="news" checked>
+              <span class="check_box"></span>
+              <label class="check" for="news">Новости</label>
             </li>
-            <li>
-              <input type="checkbox" id="gallery" name="features" value="gallery">
-              <label for="gallery">Галерея</label>
+            <li class="check_box_item">
+              <input class="check_input" type="checkbox" id="gallery" name="features" value="gallery">
+              <span class="check_box"></span>
+              <label class="check" for="gallery">Галерея</label>
             </li>
-            <li>
-              <input type="checkbox" id="cart" name="features" value="cart">
-              <label for="cart">Корзина</label>
-            </li>
+            <li class="check_box_item">
+              <input class="check_input" type="checkbox" id="cart" name="features" value="cart">
+              <span class="check_box"></span>
+              <label class="check" for="cart">Корзина</label>
+           </li>
            </ul>
          </fieldset>
-
          <button class="button button-filter" type="submit">показать</button>
-
         </form>
       </section>
       <div class="cards-wrapper">
@@ -104,68 +120,68 @@
           <li><a href="#">по типу</a></li>
           <li><a href="#">по названию</a></li>
         </ul>
-        <ul class="sort-wrapper">
-          <li><a href="#" class="button-active">по убыванию</a></li>
-          <li><a href="#">по возрастанию</a></li>
+        <ul class="sort-wrapper sort_dec_inc">
+          <li><a class="decrease active" href="#" class="button-active"></a></li>
+          <li><a class="increase" href="#"></a></li>
         </ul>
       </section>
 
       <section class="cards">
         <ul class="cards-lists">
-          <li>
+          <li class="catalog-items">
             <img src="img/catalog/catalog1.jpg" width="360" height="576" alt="Sedona - информационный сайт для туристов">
             <div class="catalog-item-info">
               <h3> <a href="#">Sedona</a></h3>
               <p>Информационный сайт для туристов</p>
-              <span class="button price-button"> 9900 Руб. </span>
-            </div>
+              <button type="button" class="button price-button"> 9900 Руб. </button>
+              </div>
           </li>
-          <li>
+          <li class="catalog-items">
             <img src="img/catalog/catalog2.jpg" width="360" height="576" alt="Pink APP- Продуктовый лендинг приложения для iOS и Android">
             <div class="catalog-item-info">
               <h3> <a href="#">Pink APP</a></h3>
               <p>Pink APP- Продуктовый лендинг приложения для iOS и Android</p>
-              <span class="button price-button"> 9900 Руб. </span>
+              <button type="button" class="button price-button"> 9900 Руб. </button>
             </div>
           </li>
-          <li>
+          <li class="catalog-items">
             <img src="img/catalog/catalog3.jpg" width="360" height="576" alt="Barbershop- Сайт салона красоты. Для мужчин, да.">
             <div class="catalog-item-info">
               <h3> <a href="#">Barbershop</a></h3>
               <p>Сайт салона красоты. Для мужчин, да.</p>
-              <span class="button price-button"> 9900 Руб. </span>
+              <button type="button" class="button price-button"> 9900 Руб. </button>
             </div>
           </li>
-          <li>
+          <li class="catalog-items">
             <img src="img/catalog/catalog4.jpg" width="360" height="576" alt="Mishka- Интернет-магазин вязаных игрушек">
             <div class="catalog-item-info">
               <h3> <a href="#">Mishka</a></h3>
               <p>Интернет-магазин вязаных игрушек</p>
-              <span class="button price-button"> 9900 Руб. </span>
+              <button type="button" class="button price-button"> 9900 Руб. </button>
             </div>
           </li>
-          <li>
+          <li class="catalog-items">
             <img src="img/catalog/catalog5.jpg" width="360" height="576" alt="A plus- Лендинг курсов повышения квалификации">
             <div class="catalog-item-info">
               <h3> <a href="#">A plus</a></h3>
               <p>Лендинг курсов повышения квалификации</p>
-              <span class="button price-button"> 9900 Руб. </span>
+              <button type="button" class="button price-button"> 9900 Руб. </button>
             </div>
           </li>
-          <li>
+          <li class="catalog-items">
             <img src="img/catalog/catalog6.jpg" width="360" height="576" alt="Кваст- Промо-сайт производителя крафтового кваса">
             <div class="catalog-item-info">
               <h3> <a href="#">Кваст</a></h3>
               <p>Промо-сайт производителя крафтового кваса</p>
-              <span class="button price-button"> 9900 Руб. </span>
+              <button type="button" class="button price-button"> 9900 Руб. </button>
             </div>
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a>1</a></li>
-          <li class="pagination-item"><a href="">2</a></li>
-          <li class="pagination-item"><a href="">3</a></li>
-          <li class="pagination-item"><a href="">Следующая</a></li>
+          <li class="pagination-item"><a class="button current">1</a></li>
+          <li class="pagination-item"><a class="button" href="">2</a></li>
+          <li class="pagination-item"><a class="button" href="">3</a></li>
+          <li class="pagination-item"><a class="button next" href="">Следующая</a></li>
         </ul>
        </section>
       </div>
@@ -203,20 +219,32 @@
       </div>
     </footer>
 
-    <section class="modal-write-us">
-      <button type="button">Закрыть</button>
-      <h2>Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <label for="name">Ваше имя:</label>
-        <input type="text" name="name" placeholder="Имя Фамилия" id="name">
-        <label for="email">Ваш e-mail:</label>
-        <input type="email" name="email" placeholder="email@example.com" id="email">
-        <p>
-          <label for="text">Текст письма:</label>
-          <textarea rows="5" cols="65" id="text" placeholder="В свободной форме" name="text"></textarea>
-        </p>
-        <button type="submit" class="button">Отправить</button>
-      </form>
+    <section class="modal">
+      <div  class="modal-write-us">
+        <div class="wrapper-write-us">
+          <div class="wrapper-title">
+            <button class="button-write-us" type="button"></button>
+            <h2>Напишите нам</h2>
+          </div>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div class="form">
+              <div class="form-item">
+                <label for="name">Ваше имя:</label>
+                <input type="text" name="name" placeholder="Имя Фамилия" id="name">
+              </div>
+              <div class="form-item">
+                <label for="email">Ваш e-mail:</label>
+                <input type="email" name="email" placeholder="email@example.com" id="email">
+              </div>
+              <div class="form-item area">
+                <label for="text">Текст письма:</label>
+                <textarea rows="5" cols="65" id="text" placeholder="В свободной форме" name="text"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="button">Отправить</button>
+          </form>
+        </div>
+      </div>
     </section>
 
   </body>
