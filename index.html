@@ -9,6 +9,7 @@
   </head>
 
   <body>
+
     <header class="site-header">
      <nav class="main-navigation container">
        <a>
@@ -19,18 +20,26 @@
           <li><a href="#">Клиенты </a></li>
           <li><a href="catalog.html">Магазин</a></li>
           <li><a href="#">Контакты</a></li>
-         </ul>
-         <ul class="cart-navigation">
-           <li><a class="cart-link" href="#" class="cart-link">Корзина</a></li>
+        </ul>
+        <ul class="cart-navigation">
+           <li><a class="cart-link" href="#">Корзина</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
      <section class="slider header-color">
-     <div class="container">
-       <ul>
-         <li class="slide">
+     <div class="container container__slider">
+       <input class="visually-hidden__radio" type="radio" id="product-1" name="toggle" checked>
+       <input class="visually-hidden__radio" type="radio" id="product-2" name="toggle">
+       <input class="visually-hidden__radio" type="radio" id="product-3" name="toggle">
+       <div class="slider-controls">
+         <label for="product-1">первый</label>
+         <label for="product-2">второй</label>
+         <label for="product-3">третий</label>
+       </div>
+       <ul class="slide-list">
+         <li class="slide slide1" id="slide1">
           <div class="slide-text">
             <h2>Долго, дорого,<br>
             скрупулезно.</h2>
@@ -42,7 +51,7 @@
           <img src="img/slide1.png" width="698" height="413" alt="Смартфон перемещается в пространстве как украшение слайдера">
           </div>
          </li>
-         <li class="slide slide2">
+         <li class="slide slide2" id="slide2">
           <div class="slide-text">
             <h2>Любим математику<br>
             как никто другой</h2>
@@ -54,7 +63,7 @@
             <img src="img/slide2.png" width="663" height="430" alt="Два современных монитора смотрят в разные стороны, на экране синий интерфейс">
           </div>
          </li>
-         <li class="slide slide3">
+         <li class="slide slide3" id="slide3">
           <div class="slide-text">
             <h2>Только ночь,<br>
             только хардкор</h2>
@@ -70,7 +79,8 @@
       </div>
      </section>
 
-     <section class="products container">
+     <section class="products-wrap container">
+       <div class="products">
        <h2 class="visuallyhidden">Услуги</h2>
        <ul class="products-list">
         <li class="products-item">
@@ -83,7 +93,7 @@
           <img class="picture-order" src="img/index2.jpg" width="300" height="146" alt="Приложения">
           <h3 class="products-item-title">Приложения</h3>
           <p>Покорите топ-10 приложений в AppStore и Google Play</p>
-          <a class="button button-green products-item-button " href="#">Заказать</a>
+          <a class="button button-green products-item-button" href="#">Заказать</a>
         </li>
         <li class="products-item">
           <img class="picture-order" src="img/index3.jpg" width="300" height="146" alt="Презентации">
@@ -92,6 +102,7 @@
           <a class="button button-оrange products-item-button" href="#">Заказать</a>
         </li>
        </ul>
+       </div>
       </section>
       <section class="about-us">
         <div class="about-us-wrapper container">
@@ -107,7 +118,7 @@
           </div>
           <div class="about-us-info">
            <img src="img/logo-us.png" width="360" height="208" alt="Логотип">
-           <table>
+           <table class="about-us__table">
              <caption>с 2004 года Любим точность во всем:</caption>
              <tr>
                <th>146<sup>%</sup></th>
@@ -127,17 +138,14 @@
       <section class="clients container">
         <h2 class="visuallyhidden">Клиенты</h2>
         <ul class="clients-list">
-          <li><a href="#"><img src="img/logo-1.png" class="html" width="199" height="68" alt="Логотип html academy"> </a></li>
+          <li><a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img src="img/logo-1.png" class="html" width="199" height="68" alt="Логотип html academy"> </a></li>
           <li><a href="#"><img src="img/logo-2.png" class="borodinski" width="209" height="90" alt="Логотип барбершопа Borodinski"> </a></li>
           <li><a href="#"><img src="img/logo-3.png" class="pink" width="185" height="52" alt="Логотип Pink"> </a></li>
           <li><a href="#"><img src="img/logo-4.png" class="mishka" width="173" height="84" alt="Логотип Mishka"> </a></li>
-        </ul>
+          </ul>
       </section>
 
      <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.2995470093337!2d30.320277277523967!3d59.93879435354852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1581630640239!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
-        </iframe>
-        <div class="container">
         <img src="img/map.jpg" class="map" width="1440" height="416" alt="Карта. Как нас найти">
         <div class="write-us-map">
           <h3>NЁRDS DESIGN STUDIO</h3>
@@ -147,8 +155,7 @@
           <p>тел. <a href="+78122757575"> +7 (812) 275-75-75</a></p>
           <a href="#" class="button write-us-button">Напишите нам</a>
         </div>
-        </div>
-      </section>
+        </section>
     </main>
 
     <footer>
@@ -166,8 +173,9 @@
             </li>
          </ul>
        </div>
-       <div class="footer-text"> <p class="footer-slogan">Давайте дружить, это выгодно!</p>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
+       <div class="footer-text">
+         <p class="footer-slogan">Давайте дружить, это выгодно!</p>
+         <p class="footer-info">Скидка 10% для друзей из социальных сетей.</p>
        </div>
       </div>
     </footer>
@@ -176,7 +184,7 @@
       <div  class="modal-write-us">
       <div class="wrapper-write-us">
       <div class="wrapper-title">
-        <button class="button-write-us" type="button"></button>
+        <button class="button-write-us-close" type="button"></button>
         <h2>Напишите нам</h2>
       </div>
         <form action="https://echo.htmlacademy.ru" method="post">
@@ -194,11 +202,10 @@
             <textarea rows="5" cols="65" id="text" placeholder="В свободной форме" name="text"></textarea>
           </div>
          </div>
-          <button type="submit" class="button">Отправить</button>
+          <button type="submit" class="button button-write-us">Отправить</button>
           </form>
       </div>
       </div>
       </section>
-
-  </body>
+      </body>
 </html>

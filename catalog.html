@@ -21,7 +21,7 @@
          <li><a href="#">Контакты </a></li>
        </ul>
        <ul class="cart-navigation">
-         <li><a class="cart-link" href="#" class="cart-link">Корзина</a></li>
+         <li><a class="cart-link" href="#">Корзина</a></li>
        </ul>
       </nav>
     </header>
@@ -58,8 +58,8 @@
 
          </fieldset>
 
-         <fieldset>
-          <legend>Сетка:</legend>
+         <fieldset class="fieldset-radio">
+          <legend class="legend-radio">Сетка:</legend>
           <ul class="radio_list">
            <li class="radio_item">
               <input class="radio_input" type="radio" id="adaptive" name="grid" value="adaptive" checked>
@@ -79,8 +79,8 @@
            </ul>
          </fieldset>
 
-         <fieldset>
-           <legend>Особенности:</legend>
+         <fieldset class="fieldset-check_box">
+           <legend class="legend-check_box">Особенности:</legend>
            <ul class="check_box_list">
             <li class="check_box_item">
               <input class="check_input" type="checkbox" id="slider" name="features" value="slider" checked>
@@ -121,18 +121,18 @@
           <li><a href="#">по названию</a></li>
         </ul>
         <ul class="sort-wrapper sort_dec_inc">
-          <li><a class="decrease active" href="#" class="button-active"></a></li>
+          <li><a class="decrease active button-active" href="#"></a></li>
           <li><a class="increase" href="#"></a></li>
         </ul>
       </section>
 
       <section class="cards">
         <ul class="cards-lists">
-          <li class="catalog-items">
+          <li class="catalog-items active">
             <img src="img/catalog/catalog1.jpg" width="360" height="576" alt="Sedona - информационный сайт для туристов">
             <div class="catalog-item-info">
               <h3> <a href="#">Sedona</a></h3>
-              <p>Информационный сайт для туристов</p>
+              <p>Информационный сайт для туристов </p>
               <button type="button" class="button price-button"> 9900 Руб. </button>
               </div>
           </li>
@@ -187,10 +187,7 @@
       </div>
       </div>
 
-     <<section class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.2995470093337!2d30.320277277523967!3d59.93879435354852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1581630640239!5m2!1sru!2sby" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
-      </iframe>
-      <div class="container">
+      <section class="map">
         <img src="img/map.jpg" class="map" width="1440" height="416" alt="Карта. Как нас найти">
         <div class="write-us-map">
           <h3>NЁRDS DESIGN STUDIO</h3>
@@ -200,21 +197,27 @@
           <p>тел. <a href="+78122757575"> +7 (812) 275-75-75</a></p>
           <a href="#" class="button write-us-button">Напишите нам</a>
         </div>
-      </div>
-    </section>
-      </main>
+        </section>
+    </main>
 
     <footer>
-      <div class="social-wrapper container">
+      <div class="social-wrapper social-wrapper-catalog container">
         <div class="social">
           <ul class="social-list">
-            <li><a href="#"><img src="img/svg/vk-icon.svg" width="26" height="15"> </a></li>
-            <li><a href="#"><img src="img/svg/fb-icon.svg" width="12" height="22" ></a></li>
-            <li><a href="#"><img src="img/svg/insta-icon.svg" width="21" height="21"></a></li>
+            <li>
+              <a href="#"><img src="img/svg/vk-icon.svg" width="26" height="15"> </a>
+            </li>
+            <li>
+              <a href="#"><img src="img/svg/fb-icon.svg" width="12" height="22" ></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/svg/insta-icon.svg" width="21" height="21"></a>
+            </li>
           </ul>
         </div>
-        <div class="footer-text"> <p class="footer-slogan">Давайте дружить, это выгодно!</p>
-          <p>Скидка 10% для друзей из социальных сетей.</p>
+        <div class="footer-text">
+          <p class="footer-slogan">Давайте дружить, это выгодно!</p>
+          <p class="footer-info">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
     </footer>
@@ -223,7 +226,7 @@
       <div  class="modal-write-us">
         <div class="wrapper-write-us">
           <div class="wrapper-title">
-            <button class="button-write-us" type="button"></button>
+            <button class="button-write-us-close" type="button"></button>
             <h2>Напишите нам</h2>
           </div>
           <form action="https://echo.htmlacademy.ru" method="post">
@@ -241,7 +244,7 @@
                 <textarea rows="5" cols="65" id="text" placeholder="В свободной форме" name="text"></textarea>
               </div>
             </div>
-            <button type="submit" class="button">Отправить</button>
+            <button type="submit" class="button button-write-us">Отправить</button>
           </form>
         </div>
       </div>
