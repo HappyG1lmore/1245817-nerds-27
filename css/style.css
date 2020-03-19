@@ -12,6 +12,7 @@ body {
 }
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 *, *::before, *::after {
   box-sizing: inherit;
@@ -29,6 +30,14 @@ textarea {
   line-height: 24px;
   font-weight: normal;
 }
+a:active, a:focus { outline: none; }
+
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+textarea {resize:none;}
+textarea {resize:vertical;}
+textarea {resize:horizontal;}
 
 .visuallyhidden:not(:focus):not(:active)  {
   position: absolute;
@@ -117,7 +126,7 @@ textarea {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.site-navigation .active-btn-header a::before {
+.active-btn-header a::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -155,7 +164,8 @@ textarea {
 
 }
 .main-navigation li {
- display: inline-block;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .cart-navigation {
@@ -199,6 +209,8 @@ textarea {
   padding-top: 10px;
   padding-bottom: 40px;
   margin: 0px;
+  color: #283136;
+  vertical-align: middle;
   }
 .slide-picture {
   width: 698px;
@@ -233,6 +245,9 @@ textarea {
   border: none;
   padding: 16px 53px;
   border-radius: 5px;
+  font-weight: 500;
+  vertical-align: middle;
+
 }
 
 .button.disabled,
@@ -367,8 +382,8 @@ textarea {
 
 .products h3 {
   margin: 0px;
-  padding: 20px 0px;
-  }
+  padding: 20px 0px 15px;
+}
 
 .products p{
   margin: 0px;
@@ -384,7 +399,7 @@ textarea {
 .products-item-title {
   text-transform: uppercase;
   font-size: 24px;
-  line-height: 24px;
+  line-height: 30px;
   color: #000000;
 }
 .products-item p{
@@ -393,6 +408,7 @@ textarea {
   padding-bottom: 10px;
   max-height: 165px;
   overflow: hidden;
+  color: #283136;
   }
 .products-item a {
   margin-top: 10px;
@@ -438,7 +454,7 @@ textarea {
   line-height: 45px;
   font-weight: 500;
   margin: 0px;
-  padding-bottom: 35px;
+  padding-bottom: 34px;
   }
 .about-us p {
   margin: 0px;
@@ -447,6 +463,7 @@ textarea {
 .about-us b {
   display: inline-block;
   padding-bottom: 25px;
+  vertical-align: middle;
 }
 
 .about-us ul {
@@ -458,24 +475,32 @@ textarea {
   font-weight: bold;
   line-height: 10px;
   padding-bottom: 33px;
-  padding-top: 49px;
+  padding-top: 48px;
   padding-right: 15px;
   text-align: left;
+}
+.about-us th:first-child {
+  padding-right: 15px;
 }
 
 .about-us td {
   font-size: 16px;
   line-height: 18px;
+  color: #283136;
 }
 
 .about-us-info sup {
   font-size: 27px;
 }
+
 .about-us-title b {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: bold;
   line-height: 24px;
+}
+.about-us-title p {
+  color: #283136;
 }
 .about-us-title li {
   padding-bottom: 10px;
@@ -503,19 +528,20 @@ textarea {
 }
 .about-us-info {
   width: 360px;
-  padding-top: 25px;
+  padding-top: 20px;
 }
 .about-us-title-ul {
   padding-left: 0px;
 }
 .about-us__table caption{
-  padding-top: 25px;
+  padding-top: 30px;
 }
 
 .about-us-title-ul li {
- padding-bottom: 23px;
- padding-left: 37px;
- position: relative;
+  padding-bottom: 23px;
+  padding-left: 37px;
+  position: relative;
+  color: #283136;
   }
 .about-us-title-ul li::before {
   content: "";
@@ -638,12 +664,11 @@ textarea {
   content: none;
 }
 
-
 /* Карта =====================================*/
 
 .write-us-map {
   position: absolute;
-  left: 340px;
+  left: 372px;
   top: 135px;
   background-size: 319px, 319px;
   font-size: 16px;
@@ -651,11 +676,11 @@ textarea {
   color: #666666;
   width: 319px;
   height: 308px;
-  padding: 50px 50px 47px;
+  padding: 47px 50px 47px;
   background-color: white;
 }
 .catalog-wrapper+.map .write-us-map {
-  left: 340px;
+  left: 373px;
   top: 115px;
 }
 
@@ -664,7 +689,8 @@ textarea {
 }
 .write-us-map .button {
   color: white;
-  padding: 17px 45px;
+  padding: 17px 40px;
+  padding-left: 45px;
   width: 220px;
   height: 50px;
 }
@@ -680,9 +706,10 @@ textarea {
   padding-bottom: 70px;
   position: relative;
 }
+
 .catalog-wrapper+.map{
   padding-top: 60px;
-  padding-bottom: 65px;
+  padding-bottom: 70px;
 }
 .write-us-map h3 {
   font-size: 18px;
@@ -692,7 +719,7 @@ textarea {
   text-transform: uppercase;
   margin: 0px;
   padding-top: 0px;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 }
 
 .write-us-map address {
@@ -701,23 +728,12 @@ textarea {
   margin: 0px;
   padding-top: 5px;
   padding-bottom: 18px;
-  padding-left: 3px;
-}
+ }
 
 .write-us-map p {
   margin: 0px;
   padding-bottom: 37px;
-  padding-left: 3px;
 }
-
-iframe {
-  position: absolute;
-  height: 420px;
-  width: 100%;
-  z-index: 2;
-}
-
-
 
 
 /* Футер =====================================*/
@@ -746,7 +762,7 @@ iframe {
   padding-top: 11px;
 }
 
-footer {
+.footer-wrapper {
   display: flex;
   width: auto;
   justify-content: center;
@@ -820,7 +836,8 @@ footer {
  .wrapper-write-us {
    display: flex;
    flex-direction: column;
-   justify-content: center;
+   justify-content: flex-start;
+   box-sizing: border-box;
 }
 
 .wrapper-title {
@@ -829,11 +846,12 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 47px;
+  padding: 67px 0 43px 6px;
+  width: 775px;
 }
 .wrapper-title h2 {
   font-size: 45px;
-  font-weight: normal;
+  font-weight: 500;
   line-height: 45px;
   margin: 0px;
   }
@@ -842,14 +860,16 @@ footer {
   width: 760px;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-left: 8px;
 }
 .form-item {
   display: flex;
   flex-direction: column;
   width: 360px;
+
 }
 .form-item label {
-  padding-bottom: 12px;
+  padding-bottom: 9px;
   font-weight: bold;
   font-size: 16px;
   line-height: 18px;
@@ -857,19 +877,19 @@ footer {
 }
 .form-item.area {
   width: 100%;
-  padding-top: 36px;
+  padding-top: 34px;
   padding-bottom: 47px;
 }
 .form input {
   height: 50px;
-  padding: 0 16px;
+  padding: 0 13px 3px;
   color: rgba(68, 68, 68, 0.5);
   opacity: 0.5;
   line-height: 18px;
 }
 .form textarea {
   height: 118px;
-  padding: 14px 16px;
+  padding: 10px 13px;
   opacity: 0.5;
   line-height: 18px;
 }
@@ -883,10 +903,13 @@ footer {
   position: absolute;
   right: 0;
   cursor: pointer;
+  font-weight: 500;
 }
+
 .button-write-us {
   width: 260px;
   height: 50px;
+  margin-left: 7px;
 }
 
 .button-write-us:hover {
@@ -900,6 +923,12 @@ footer {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21'%3E%3Cpath fill='%23FB565A' d='M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z'/%3E%3C/svg%3E");
   height: 21px;
   width: 21px;
+}
+.button-write-us-close:hover {
+  opacity: 1;
+}
+.button-write-us-close:active {
+  opacity: 0.1;
 }
 
   .modal-write-us input,
@@ -921,6 +950,7 @@ footer {
 /* Страница каталога All =====================================*/
 .container-center {
   justify-content: center;
+  font-weight: 500;
 }
 .page-title {
   margin:0;
@@ -935,7 +965,7 @@ footer {
   border: none;
   padding: 0px;
   margin: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 52px;
 }
 .filters .fieldset-radio{
   padding-bottom: 30px;
@@ -944,7 +974,6 @@ footer {
 .filters .fieldset-check_box {
   padding-bottom: 35px;
 }
-
 
 .filters legend {
   text-transform: uppercase;
@@ -1055,18 +1084,22 @@ footer {
 }
 .price-controls {
   font-size: 0;
-}
+ }
 
 .price-controls label {
   display: inline-block;
   width: 50%;
   font-size: 16px;
   text-transform: uppercase;
+  line-height: 22px;
+  vertical-align: middle;
 }
+
 .price-controls input {
   width: 80px;
   padding: 8px 10px;
   margin-left: 10px;
+  line-height: 22px;
   -moz-appearance: textfield;
 
   font-family: Roboto, Arial, sans-serif;
@@ -1077,6 +1110,11 @@ footer {
   border: none;
   border-radius: 5px;
   background: #f1f1f1
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .max-price {
   text-align: right;
@@ -1183,6 +1221,10 @@ footer {
 .radio_item {
   margin-bottom: 15px;
 }
+.radio_item .radio {
+  margin-bottom: 2px;
+
+}
 .radio_item:hover .radio_wrap {
   opacity: 1;
 }
@@ -1284,7 +1326,7 @@ footer {
 
 
 /* Каталог =====================================*/
-main .page-title {
+.page-title {
   font-size: 55px;
   line-height: 55px;
 }
@@ -1313,7 +1355,7 @@ main .page-title {
   flex-direction: column;
   align-items: center;
   background-color: #eeeeee;
-  width: 360px;
+  width: 362px;
   height: 231px;
 }
 .catalog-item-info a {
@@ -1322,10 +1364,24 @@ main .page-title {
   color: #000000;
   text-transform: uppercase;
 }
+.catalog-item-info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+  margin:29px 0 10px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .catalog-item-info p {
-  max-width: 225px;
+  max-width: 245px;
   text-align: center;
   color: #666666;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 18px;
+  margin: 0;
+
 }
 
 .catalog-item-info a:hover {
@@ -1357,6 +1413,7 @@ main .page-title {
   display: inline-block;
   justify-content: flex-start;
   padding-right: 11px;
+  vertical-align: middle;
  }
 
 .pagination-list a{
@@ -1409,35 +1466,17 @@ main .page-title {
 .catalog-item-info {
   position: absolute;
   bottom: 34px;
+  left: -1px;
   display: none;
   justify-content: space-between;
 }
-.catalog-item-info h3 {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-  margin: 0;
-  padding-top: 30px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.catalog-item-info p {
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 18px;
-  margin: 0;
-  padding: 15px 15px 20px;
-  margin-bottom: 10px;
 
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 .catalog-item-info .button {
   font-size: 16px;
-  font-weight: normal;
+  font-weight: 500;
   line-height: 18px;
-  margin: 0;
-  margin-bottom: 43px;
+  margin: 10px 0 43px;
+
   padding: 16px 60px;
 }
 .catalog-items::after {
@@ -1455,7 +1494,8 @@ main .page-title {
   opacity: 1;
 }
 
-.catalog-items:hover .catalog-item-info{
+/*.catalog-items:hover .catalog-item-info{ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+ .catalog-item-info{
   position: absolute;
   bottom: 34px;
   display: flex;
