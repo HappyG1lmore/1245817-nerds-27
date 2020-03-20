@@ -12,7 +12,7 @@
     <header class="site-header ">
       <nav class="main-navigation container">
        <a href="index.html">
-          <img src="img/nerds-logo.svg" alt="Логотип" width="160" height="65">
+         <img src="img/nerds-logo.svg" alt="Логотип магазина готовых шаблонов - Нёрдс" width="160" height="65" aria-label="Логотип магазина готовыш шаблонов - Nerds">
        </a>
        <ul class="site-navigation">
          <li><a href="#">Студия </a></li>
@@ -46,8 +46,8 @@
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <div class="toggle toggle-min" aria-label="ползунок 1 - ОТ. Определяет начальное значение фильтра"></div>
+                <div class="toggle toggle-max" aria-label="ползунок 2 - ДО. Определяет конечное значение фильтра"></div>
               </div>
               <div class="price-controls">
                  <label class="min-price">от <input name="min-price" type="number" value="0"></label>
@@ -55,9 +55,7 @@
               </div>
             </div>
 
-
          </fieldset>
-
          <fieldset class="fieldset-radio">
           <legend class="legend-radio">Сетка:</legend>
           <ul class="radio_list">
@@ -121,8 +119,8 @@
           <li><a href="#">по названию</a></li>
         </ul>
         <ul class="sort-wrapper sort_dec_inc">
-          <li><a class="decrease active button-active" href="#"></a></li>
-          <li><a class="increase" href="#"></a></li>
+          <li><a class="decrease active button-active" href="#" aria-label="сортировать по убиыванию"></a></li>
+          <li><a class="increase" href="#" aria-label="сортировать по возрастанию"></a></li>
         </ul>
       </section>
 
@@ -133,7 +131,7 @@
             <div class="catalog-item-info">
               <h3> <a href="#">Sedona</a></h3>
               <p>Информационный сайт для туристов </p>
-              <button type="button" class="button price-button"> 9900 Руб. </button>
+              <button type="button" class="button price-button"> 9 900 Руб. </button>
               </div>
           </li>
           <li class="catalog-items">
@@ -141,7 +139,7 @@
             <div class="catalog-item-info">
               <h3> <a href="#">Pink APP</a></h3>
               <p>Продуктовый лендинг приложения для iOS и Android</p>
-              <button type="button" class="button price-button"> 9900 Руб. </button>
+              <button type="button" class="button price-button"> 9 900 Руб. </button>
             </div>
           </li>
           <li class="catalog-items">
@@ -149,7 +147,7 @@
             <div class="catalog-item-info">
               <h3> <a href="#">Barbershop</a></h3>
               <p>Сайт салона красоты. Для мужчин, да.</p>
-              <button type="button" class="button price-button"> 9900 Руб. </button>
+              <button type="button" class="button price-button"> 9 900 Руб. </button>
             </div>
           </li>
           <li class="catalog-items">
@@ -157,7 +155,7 @@
             <div class="catalog-item-info">
               <h3> <a href="#">Mishka</a></h3>
               <p>Интернет-магазин вязаных игрушек</p>
-              <button type="button" class="button price-button"> 9900 Руб. </button>
+              <button type="button" class="button price-button"> 9 900 Руб. </button>
             </div>
           </li>
           <li class="catalog-items">
@@ -165,7 +163,7 @@
             <div class="catalog-item-info">
               <h3> <a href="#">A plus</a></h3>
               <p>Лендинг курсов повышения квалификации</p>
-              <button type="button" class="button price-button"> 9900 Руб. </button>
+              <button type="button" class="button price-button"> 9 900 Руб. </button>
             </div>
           </li>
           <li class="catalog-items">
@@ -173,7 +171,7 @@
             <div class="catalog-item-info">
               <h3> <a href="#">Кваст</a></h3>
               <p>Промо-сайт производителя крафтового кваса</p>
-              <button type="button" class="button price-button"> 9900 Руб. </button>
+              <button type="button" class="button price-button"> 9 900 Руб. </button>
             </div>
           </li>
         </ul>
@@ -194,32 +192,30 @@
           <address> 191186, Санкт-Петербург,
             ул. Б. Конюшенная, д. 19/8
           </address>
-          <p>тел. <a href="+78122757575"> +7 (812) 275-75-75</a></p>
+          <p class="info">тел. <a href="+78122757575"> +7 (812) 275-75-75</a></p>
           <a href="#" class="button write-us-button">Напишите нам</a>
         </div>
         </section>
     </main>
 
-    <footer>
-      <div class="footer-wrapper">
-        <div class="social-wrapper container">
-          <div class="social">
-            <ul class="social-list">
-              <li>
-                <a href="#"><img src="img/svg/vk-icon.svg" width="26" height="15" alt="Логотип социальной сети Вконтакте"> </a>
-              </li>
-              <li>
-                <a href="#"><img src="img/svg/fb-icon.svg" width="12" height="22" alt="Логотип социальной сети Фейсбук"></a>
-              </li>
-              <li>
-                <a href="#"><img src="img/svg/insta-icon.svg" width="21" height="21" alt="Логотип социальной сети Инстаграм"></a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-text">
-            <p class="footer-slogan">Давайте дружить, это выгодно!</p>
-            <p class="footer-info">Скидка 10% для друзей из социальных сетей.</p>
-          </div>
+    <footer class="footer-wrapper">
+      <div class="social-wrapper container">
+        <div class="social">
+          <ul class="social-list">
+            <li>
+              <a href="#"><img src="img/svg/vk-icon.svg" width="26" height="15" alt="Логотип социальной сети Вконтакте" aria-label="ссылка на социальную сеть Вконтакте"> </a>
+            </li>
+            <li>
+              <a href="#"><img src="img/svg/fb-icon.svg" width="12" height="22" alt="Логотип социальной сети Фейсбук" aria-label="ссылка на социальную сеть Фейсбук"></a>
+            </li>
+            <li>
+              <a href="#"><img src="img/svg/insta-icon.svg" width="21" height="21" alt="Логотип социальной сети Инстаграм" aria-label="ссылка на социальную сеть Инстаграм"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-text">
+          <p class="footer-slogan">Давайте дружить, это выгодно!</p>
+          <p class="footer-info">Скидка 10% для друзей из социальных сетей.</p>
         </div>
       </div>
     </footer>

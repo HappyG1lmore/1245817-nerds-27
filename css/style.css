@@ -17,27 +17,9 @@ html {
 *, *::before, *::after {
   box-sizing: inherit;
 }
-
 a {
   text-decoration: none;
   }
-button,
-input,
-select,
-textarea {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: normal;
-}
-a:active, a:focus { outline: none; }
-
-input, textarea {outline:none;}
-input:active, textarea:active {outline:none;}
-:focus {outline:none;}
-textarea {resize:none;}
-textarea {resize:vertical;}
-textarea {resize:horizontal;}
 
 .visuallyhidden:not(:focus):not(:active)  {
   position: absolute;
@@ -215,7 +197,7 @@ textarea {resize:horizontal;}
 .slide-picture {
   width: 698px;
   display: flex;
-  padding-top: 10px;
+  align-items: flex-end;
 }
 .slide2 .slide-picture {
   justify-content: flex-end;
@@ -285,12 +267,12 @@ textarea {resize:horizontal;}
 
 .slide {
   display: flex;
-  width: 1130px;
+  min-width: 1130px;
+  height: 425px;
   justify-content: space-between;
   align-items: stretch;
   display: none
 }
-
 
 .slider-controls {
   display: flex;
@@ -301,7 +283,6 @@ textarea {resize:horizontal;}
   height: 18px;
   margin-right: 17px;
 
-  vertical-align: top;
   border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
@@ -382,7 +363,7 @@ textarea {resize:horizontal;}
 
 .products h3 {
   margin: 0px;
-  padding: 20px 0px 15px;
+  padding: 16px 0px 15px;
 }
 
 .products p{
@@ -475,14 +456,13 @@ textarea {resize:horizontal;}
   font-weight: bold;
   line-height: 10px;
   padding-bottom: 33px;
-  padding-top: 48px;
+  padding-top: 57px;
   padding-right: 15px;
   text-align: left;
 }
 .about-us th:first-child {
   padding-right: 15px;
 }
-
 .about-us td {
   font-size: 16px;
   line-height: 18px;
@@ -492,7 +472,9 @@ textarea {resize:horizontal;}
 .about-us-info sup {
   font-size: 27px;
 }
-
+.about-us-info img {
+  padding-top: 5px;
+}
 .about-us-title b {
   text-transform: uppercase;
   font-size: 16px;
@@ -512,9 +494,6 @@ textarea {resize:horizontal;}
   line-height: 24px;
 }
 .about-us {
-  display: flex;
-  width: 100%;
-  justify-content: center;
   padding-top: 20px;
   padding-bottom: 50px;
 }
@@ -683,6 +662,9 @@ textarea {resize:horizontal;}
   left: 373px;
   top: 115px;
 }
+.write-us-map .info {
+  text-align: left;
+}
 
 .write-us-map a {
   color: #666666;
@@ -765,7 +747,6 @@ textarea {resize:horizontal;}
 .footer-wrapper {
   display: flex;
   width: auto;
-  justify-content: center;
   padding-bottom: 75px;
 }
 
@@ -842,10 +823,6 @@ textarea {resize:horizontal;}
 
 .wrapper-title {
   position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   padding: 67px 0 43px 6px;
   width: 775px;
 }
@@ -893,6 +870,8 @@ textarea {resize:horizontal;}
   opacity: 0.5;
   line-height: 18px;
 }
+.form input:focus {outline: none;}
+.form textarea:focus {outline: none;}
 
 .button-write-us-close {
   border: none;
@@ -1019,10 +998,6 @@ textarea {resize:horizontal;}
 }
 .filters .price {
   padding-bottom: 5px;
-}
-
-.filters fieldset {
-  display: flex;
 }
 
 .filter-item {
@@ -1165,7 +1140,10 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: 15px;
   }
 
-.check_box_item:hover .check_box {
+.check_box_item:hover .check_box{
+  opacity: 1;
+}
+.check_box_item:focus .check_box{
   opacity: 1;
 }
 
@@ -1225,7 +1203,8 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: 2px;
 
 }
-.radio_item:hover .radio_wrap {
+.radio_item:hover .radio_wrap,
+.radio_item:focus .radio_wrap{
   opacity: 1;
 }
 
@@ -1270,7 +1249,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .sort {
   display: flex;
-  justify-content: flex-end;
   padding-top: 60px;
   padding-bottom: 50px;
 }
@@ -1455,6 +1433,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 760px;
 }
 .cards-lists li {
   width: 360px;
@@ -1468,7 +1447,6 @@ input[type="number"]::-webkit-inner-spin-button {
   bottom: 34px;
   left: -1px;
   display: none;
-  justify-content: space-between;
 }
 
 .catalog-item-info .button {
