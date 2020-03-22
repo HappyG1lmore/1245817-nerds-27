@@ -156,7 +156,7 @@ a {
   position: relative;
   margin: 0px;
   margin-top: 7px;
-  padding-left: 25px;
+  margin-left: 25px;
 
 }
 
@@ -168,50 +168,56 @@ a {
   margin: 0;
  }
 .slide-text h2 {
- font-size: 55px;
- line-height: 55px;
- font-weight: 500;
- margin: 0px;
- padding-top: 91px;
- padding-bottom: 13px;
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  margin: 0px;
+  padding-top: 91px;
+  padding-bottom: 13px;
+  height: auto;
  }
 
 .slide-text {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   width: 380px;
+  padding-top: 196px;
   padding-bottom: 20px;
-}
-.slide-text a{
-  width: 240px;
 }
 
 .slide-text p {
   display: inline-block;
-  padding-top: 10px;
-  padding-bottom: 40px;
-  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 40px;
   color: #283136;
   vertical-align: middle;
+  height: auto;
   }
 .slide-picture {
   width: 698px;
   display: flex;
   align-items: flex-end;
+  max-height: 420px;
+  margin-top: 4px;
 }
-.slide2 .slide-picture {
-  justify-content: flex-end;
-}
+
 .slide2 .slide-text {
   width: 100%;
 }
 .slide-text .button {
   margin-bottom: 60px;
+  display: block;
+}
+.slide-text a{
+  width: auto;
+  margin-right: auto;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: content-box;
 }
 
-.slide-text {
- justify-content: flex-end;
-}
 .slide-text h2{
   position: absolute;
   top: 100px;
@@ -268,7 +274,7 @@ a {
 .slide {
   display: flex;
   min-width: 1130px;
-  height: 425px;
+  min-height: 425px;
   justify-content: space-between;
   align-items: stretch;
   display: none
@@ -292,7 +298,7 @@ a {
   position: absolute;
 
   left: 909px;
-  top: 430px;
+  top: 431px;
   z-index: 14;
   font-size: 0px;
 }
@@ -363,7 +369,7 @@ a {
 
 .products h3 {
   margin: 0px;
-  padding: 16px 0px 15px;
+  padding: 17px 0px 16px;
 }
 
 .products p{
@@ -372,10 +378,12 @@ a {
 }
 
 .products-item-button{
-  width: 160px;
-  padding: 0;
+  width: auto;
   text-align: center;
-  padding: 16px 0;
+  padding: 16px 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 300px;
 }
 .products-item-title {
   text-transform: uppercase;
@@ -644,6 +652,13 @@ a {
 }
 
 /* Карта =====================================*/
+.google-map {
+  position: absolute;
+  height: 420px;
+  min-width: 1440px;
+  max-width: 1900px;
+  z-index: 2;
+}
 
 .write-us-map {
   position: absolute;
@@ -657,6 +672,7 @@ a {
   height: 308px;
   padding: 47px 50px 47px;
   background-color: white;
+  z-index: 5;
 }
 .catalog-wrapper+.map .write-us-map {
   left: 373px;
@@ -805,15 +821,23 @@ a {
 }
 
 .modal-write-us {
-  display: flex;
+  display: none;
   justify-content: center;
   width: 960px;
   height: 590px;
   box-shadow: 0px 20px 40px 0px rgba(0, 1, 1, 0.75);
-  position: absolute;
+  position: fixed;
   left: 50%;
+  top: 50%;
   margin-left: -480px;
+  margin-top: -295px;
+  z-index: 15;
+  background-color: white;
  }
+.modal-show {
+  display: flex;
+}
+
  .wrapper-write-us {
    display: flex;
    flex-direction: column;
@@ -822,6 +846,8 @@ a {
 }
 
 .wrapper-title {
+  display: flex;
+  align-items: center;
   position: relative;
   padding: 67px 0 43px 6px;
   width: 775px;
@@ -902,6 +928,7 @@ a {
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 21 21'%3E%3Cpath fill='%23FB565A' d='M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z'/%3E%3C/svg%3E");
   height: 21px;
   width: 21px;
+  top: 0;
 }
 .button-write-us-close:hover {
   opacity: 1;
@@ -1143,7 +1170,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .check_box_item:hover .check_box{
   opacity: 1;
 }
-.check_box_item:focus .check_box{
+.check:focus .check_box{
   opacity: 1;
 }
 
@@ -1151,7 +1178,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .check_input:disabled~.check {
  opacity: 0.1;
 }
-
 
                  /* --- radio --- */
 
@@ -1196,15 +1222,14 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-direction: column;
   align-items: flex-start;
 }
+
 .radio_item {
   margin-bottom: 15px;
 }
 .radio_item .radio {
   margin-bottom: 2px;
-
 }
-.radio_item:hover .radio_wrap,
-.radio_item:focus .radio_wrap{
+.radio_item:hover .radio_wrap{
   opacity: 1;
 }
 
@@ -1334,7 +1359,15 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   background-color: #eeeeee;
   width: 362px;
-  height: 231px;
+  min-height: 231px;
+  max-height: 577px;
+
+  position: absolute;
+  bottom: 34px;
+  left: -1px;
+  display: none;
+
+
 }
 .catalog-item-info a {
   font-size: 18px;
@@ -1352,15 +1385,18 @@ input[type="number"]::-webkit-inner-spin-button {
   text-overflow: ellipsis;
 }
 .catalog-item-info p {
-  max-width: 245px;
+  width: 245px;
+  max-height: 550px;
   text-align: center;
   color: #666666;
   font-size: 16px;
   font-weight: normal;
   line-height: 18px;
   margin: 0;
-
-}
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  }
 
 .catalog-item-info a:hover {
   color: #fb565a;
@@ -1384,6 +1420,8 @@ input[type="number"]::-webkit-inner-spin-button {
   display: flex;
   justify-content: flex-start;
   margin-top: 25px;
+  flex-wrap: wrap;
+  width: 750px;
   }
 
 
@@ -1392,23 +1430,29 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: flex-start;
   padding-right: 11px;
   vertical-align: middle;
+  flex-wrap: wrap;
  }
 
 .pagination-list a{
   display: flex;
   color: #000000;
   background-color: #eeeeee;
-  width: 50px;
+  width: auto;
+  max-width: 250px;
   height: 50px;
-  padding: 0px;
+  padding: 0 19px;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .pagination-item .next {
   height: 50px;
   width: auto;
   padding: 0px 78px;
+  max-width: 350px;
 }
 
 .pagination-list a.current {
@@ -1442,12 +1486,7 @@ input[type="number"]::-webkit-inner-spin-button {
   padding-top: 40px;
 
 }
-.catalog-item-info {
-  position: absolute;
-  bottom: 34px;
-  left: -1px;
-  display: none;
-}
+
 
 .catalog-item-info .button {
   font-size: 16px;
