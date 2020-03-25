@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <title>Магазин готовых шаблонов - Нёрдс</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
 <header class="site-header">
   <nav class="main-navigation container">
-    <a><img alt="Логотип магазина готовых шаблонов - Нёрдс" aria-label="Логотип магазина готовыш шаблонов - Nerds" height="65" src="img/nerds-logo.svg" width="160"></a>
+    <a aria-label="Логотип магазина готовыш шаблонов - Nerds"><img alt="Логотип магазина готовых шаблонов - Нёрдс" height="65" src="img/nerds-logo.svg" width="160"></a>
     <ul class="site-navigation">
       <li>
         <a href="#">Студия</a>
@@ -92,7 +92,7 @@
   <section class="about-us">
     <div class="about-us-wrapper container">
       <div class="about-us-title">
-        <h2>Мы - маленькая, но гордая дизайн-студия из Краснодара.</h2>
+        <h2>Мы — маленькая, но гордая дизайн-студия из Краснодара.</h2>
         <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p><b>Выполняем заказы на разработку:</b>
         <ul class="about-us-title-ul">
           <li>Веб-сайтов любой сложности</li>
@@ -124,27 +124,31 @@
     <h2 class="visuallyhidden">Клиенты</h2>
     <ul class="clients-list">
       <li>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img alt="Логотип html academy" aria-label="HTML академия" class="html" height="68" src="img/logo-1.png" width="199"></a>
+        <a aria-label="HTML академия" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><img alt="Логотип html academy" class="html" height="68" src="img/logo-1.png" width="199"></a>
       </li>
       <li>
-        <a href="#"><img alt="Логотип барбершопа Borodinski" aria-label="барбершоп Borodinski" class="borodinski" height="90" src="img/logo-2.png" width="209"></a>
+        <a aria-label="барбершоп Borodinski" href="#"><img alt="Логотип барбершопа Borodinski" class="borodinski" height="90" src="img/logo-2.png" width="209"></a>
       </li>
       <li>
-        <a href="#"><img alt="Логотип Pink" aria-label="компания Pink" class="pink" height="52" src="img/logo-3.png" width="185"></a>
+        <a aria-label="компания Pink" href="#"><img alt="Логотип Pink" class="pink" height="52" src="img/logo-3.png" width="185"></a>
       </li>
       <li>
-        <a href="#"><img alt="Логотип Mishka" aria-label="Интернет-магазин MISHKA" class="mishka" height="84" src="img/logo-4.png" width="173"></a>
+        <a aria-label="Интернет-магазин MISHKA" href="#"><img alt="Логотип Mishka" class="mishka" height="84" src="img/logo-4.png" width="173"></a>
       </li>
     </ul>
   </section>
-  <section class="map">
-    <iframe allowfullscreen aria-hidden="false" class="google-map" height="450" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5943917937711!2d30.31882052114869!3d59.93887237432839!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1584701827275!5m2!1sru!2sby" style="border:0;" tabindex="0" width="600"></iframe> <img alt="Карта. Как нас найти" class="map" height="416" src="img/map.jpg" width="1440">
-    <div class="write-us-map">
-      <h3>NЁRDS DESIGN STUDIO</h3>
-      <address>
-        191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-      </address>
-      <p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p><a class="button write-us-button" href="#">Напишите нам</a>
+  <section class="map-wrapper">
+    <div class="map">
+      <iframe allowfullscreen aria-hidden="false" class="google-map" height="450" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5943917937711!2d30.31882052114869!3d59.93887237432839!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1584701827275!5m2!1sru!2sby" style="border:0;" tabindex="0" width="600"></iframe>
+      <div class="write-us-wrapper">
+        <div class="write-us-map">
+          <h3>NЁRDS DESIGN STUDIO</h3>
+          <address>
+            191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          </address>
+          <p>тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a></p><a class="button write-us-button" href="#">Напишите нам</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
@@ -153,13 +157,13 @@
     <div class="social">
       <ul class="social-list">
         <li>
-          <a href="#"><img alt="Логотип социальной сети Вконтакте" aria-label="ссылка на социальную сеть Вконтакте" height="15" src="img/svg/vk-icon.svg" width="26"></a>
+          <a aria-label="ссылка на социальную сеть Вконтакте" href="#"><img alt="Логотип социальной сети Вконтакте" height="15" src="img/svg/vk-icon.svg" width="26"></a>
         </li>
         <li>
-          <a href="#"><img alt="Логотип социальной сети Фейсбук" aria-label="ссылка на социальную сеть Фейсбук" height="22" src="img/svg/fb-icon.svg" width="12"></a>
+          <a aria-label="ссылка на социальную сеть Фейсбук" href="#"><img alt="Логотип социальной сети Фейсбук" height="22" src="img/svg/fb-icon.svg" width="12"></a>
         </li>
         <li>
-          <a href="#"><img alt="Логотип социальной сети Инстаграм" aria-label="ссылка на социальную сеть Инстаграм" height="21" src="img/svg/insta-icon.svg" width="21"></a>
+          <a aria-label="ссылка на социальную сеть Инстаграм" href="#"><img alt="Логотип социальной сети Инстаграм" height="21" src="img/svg/insta-icon.svg" width="21"></a>
         </li>
       </ul>
     </div>
@@ -192,6 +196,7 @@
     </div>
   </div>
 </section>
-<script src="js/main.min.js"></script>
+<script src="js/main.js">
+</script>
 </body>
 </html>
